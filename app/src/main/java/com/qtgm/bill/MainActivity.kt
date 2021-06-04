@@ -7,7 +7,6 @@ class MainActivity : BaseActivity() {
 
     override fun setLayoutId(): Int = R.layout.activity_main
 
-
     override fun initView() {
         tvShow.text = "hello bill!"
     }
