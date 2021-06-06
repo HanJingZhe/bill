@@ -14,8 +14,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="ff5722">#FF5722</color>
+    <color name="fd7468">#fd7468</color>
     <color name="ff17d39a">#17d39a</color>
+    <color name="ccc">#ccc</color>
+    <color name="b16761">#b16761</color>
+    <color name="ff585858">#585858</color>
 
 
 </resources>

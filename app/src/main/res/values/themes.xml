@@ -3,7 +3,7 @@
     <style name="Theme.Bill" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryVariant">@color/ff5722</item>
+        <item name="colorPrimaryVariant">@color/fd7468</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -16,4 +16,26 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:windowBackground">@color/white</item>
     </style>
+
+    <style name="recordMoneyBoard">
+        <item name="android:layout_width">45dp</item>
+        <item name="android:layout_height">45dp</item>
+<!--        <item name="android:background">@color/ff17d39a</item>-->
+    </style>
+
+    <style name="recordMoneyBoardTV" parent="recordMoneyBoard">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="recordMoneyBoardTVNumber" parent="recordMoneyBoardTV">
+        <item name="android:textColor">@color/b16761</item>
+    </style>
+
+    <style name="recordMoneyBoardTVFunc" parent="recordMoneyBoardTV">
+        <item name="android:textColor">@color/ff585858</item>
+    </style>
+
+
 </resources>

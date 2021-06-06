@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.RecordBillActivity">
+
+    <!--header-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/fd7468">
+
+        <ImageView
+            android:id="@+id/ivRecord"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:scaleType="center"
+            android:src="@mipmap/ic_select_record" />
+
+        <TextView
+            android:id="@+id/tvMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            tools:text="0.00" />
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCategory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        tools:itemCount="2"
+        tools:listitem="@layout/adapter_category_layout" />
+
+    <!--recording-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <!--1 column-->
+        <ImageView
+            android:id="@+id/ivCloseRecord"
+            style="@style/recordMoneyBoard"
+            android:layout_marginStart="32dp"
+            android:scaleType="center"
+            android:src="@mipmap/ic_close_record"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvRecordDiv"
+            style="@style/recordMoneyBoardTVFunc"
+            android:layout_marginEnd="32dp"
+            android:text="@string/record_func_div"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivCloseRecord" />
+
+        <!--2 column-->
+        <TextView
+            android:id="@+id/tvRecordNumber7"
+            style="@style/recordMoneyBoardTVNumber"
+            android:text="@string/record_number_7"
+            app:layout_constraintStart_toStartOf="@id/ivCloseRecord"
+            app:layout_constraintTop_toBottomOf="@id/ivCloseRecord" />
+
+        <TextView
+            android:id="@+id/tvRecordNumber8"
+            style="@style/recordMoneyBoardTVNumber"
+            android:text="@string/record_number_8"
+            app:layout_constraintBottom_toBottomOf="@id/tvRecordNumber7"
+            app:layout_constraintEnd_toStartOf="@id/tvRecordNumber9"
+            app:layout_constraintStart_toEndOf="@id/tvRecordNumber7"
+            app:layout_constraintTop_toTopOf="@id/tvRecordNumber7" />
+
+        <TextView
+            android:id="@+id/tvRecordNumber9"
+            style="@style/recordMoneyBoardTVNumber"
+            android:text="@string/record_number_9"
+            app:layout_constraintBottom_toBottomOf="@id/tvRecordNumber7"
+            app:layout_constraintEnd_toStartOf="@id/tvRecordMul"
+            app:layout_constraintStart_toEndOf="@id/tvRecordNumber8"
+            app:layout_constraintTop_toTopOf="@id/tvRecordNumber7" />
+
+        <TextView
+            android:id="@+id/tvRecordMul"
+            style="@style/recordMoneyBoardTVFunc"
+            android:text="@string/record_func_mul"
+            app:layout_constraintBottom_toBottomOf="@id/tvRecordNumber7"
+            app:layout_constraintEnd_toEndOf="@id/tvRecordDiv"
+            app:layout_constraintTop_toTopOf="@id/tvRecordNumber7" />
+
+        <!--3 column-->
+        <TextView
+            android:id="@+id/tvRecordNumber4"
+            style="@style/recordMoneyBoardTVNumber"
+            android:text="@string/record_number_4"
+            app:layout_constraintStart_toStartOf="@id/ivCloseRecord"
+            app:layout_constraintTop_toBottomOf="@id/tvRecordNumber7" />
+
+        <TextView
+            android:id="@+id/tvRecordNumber5"
+            style="@style/recordMoneyBoardTVNumber"
+            android:text="@string/record_number_5"
+            app:layout_constraintBottom_toBottomOf="@id/tvRecordNumber4"
+            app:layout_constraintEnd_toStartOf="@id/tvRecordNumber6"
+            app:layout_constraintStart_toEndOf="@id/tvRecordNumber4"
+            app:layout_constraintTop_toTopOf="@id/tvRecordNumber4" />
+
+        <TextView
+            android:id="@+id/tvRecordNumber6"
+            style="@style/recordMoneyBoardTVNumber"
+            android:text="@string/record_number_6"
+            app:layout_constraintBottom_toBottomOf="@id/tvRecordNumber4"
+            app:layout_constraintEnd_toStartOf="@id/tvRecordSub"
+            app:layout_constraintStart_toEndOf="@id/tvRecordNumber5"
+            app:layout_constraintTop_toTopOf="@id/tvRecordNumber4" />
+
+        <TextView
+            android:id="@+id/tvRecordSub"
+            style="@style/recordMoneyBoardTVFunc"
+            android:text="@string/record_func_sub"
+            app:layout_constraintBottom_toBottomOf="@id/tvRecordNumber4"
+            app:layout_constraintEnd_toEndOf="@id/tvRecordDiv"
+            app:layout_constraintTop_toTopOf="@id/tvRecordNumber4" />
+
+        <!--4 column-->
+        <TextView
+            android:id="@+id/tvRecordNumber1"
+            style="@style/recordMoneyBoardTVNumber"
+            android:text="@string/record_number_1"
+            app:layout_constraintStart_toStartOf="@id/ivCloseRecord"
+            app:layout_constraintTop_toBottomOf="@id/tvRecordNumber4" />
+
+        <TextView
+            android:id="@+id/tvRecordNumber2"
+            style="@style/recordMoneyBoardTVNumber"
+            android:text="@string/record_number_2"
+            app:layout_constraintBottom_toBottomOf="@id/tvRecordNumber1"
+            app:layout_constraintEnd_toStartOf="@id/tvRecordNumber3"
+            app:layout_constraintStart_toEndOf="@id/tvRecordNumber1"
+            app:layout_constraintTop_toTopOf="@id/tvRecordNumber1" />
+
+        <TextView
+            android:id="@+id/tvRecordNumber3"
+            style="@style/recordMoneyBoardTVNumber"
+            android:text="@string/record_number_3"
+            app:layout_constraintBottom_toBottomOf="@id/tvRecordNumber1"
+            app:layout_constraintEnd_toStartOf="@id/tvRecordAdd"
+            app:layout_constraintStart_toEndOf="@id/tvRecordNumber2"
+            app:layout_constraintTop_toTopOf="@id/tvRecordNumber1" />
+
+        <TextView
+            android:id="@+id/tvRecordAdd"
+            style="@style/recordMoneyBoardTVFunc"
+            android:text="@string/record_func_add"
+            app:layout_constraintBottom_toBottomOf="@id/tvRecordNumber1"
+            app:layout_constraintEnd_toEndOf="@id/tvRecordDiv"
+            app:layout_constraintTop_toTopOf="@id/tvRecordNumber1" />
+
+        <!--5 column-->
+        <ImageView
+            android:id="@+id/ivBackClick"
+            style="@style/recordMoneyBoard"
+            android:scaleType="center"
+            android:src="@mipmap/ic_back_click"
+            app:layout_constraintStart_toStartOf="@id/ivCloseRecord"
+            app:layout_constraintTop_toBottomOf="@id/tvRecordNumber1" />
+
+        <TextView
+            android:id="@+id/tvRecordNumber0"
+            style="@style/recordMoneyBoardTVNumber"
+            android:text="@string/record_number_0"
+            app:layout_constraintBottom_toBottomOf="@id/ivBackClick"
+            app:layout_constraintEnd_toStartOf="@id/tvRecordDot"
+            app:layout_constraintStart_toEndOf="@id/ivBackClick"
+            app:layout_constraintTop_toTopOf="@id/ivBackClick" />
+
+        <TextView
+            android:id="@+id/tvRecordDot"
+            style="@style/recordMoneyBoardTVFunc"
+            android:text="@string/record_func_dot"
+            app:layout_constraintBottom_toBottomOf="@id/ivBackClick"
+            app:layout_constraintEnd_toStartOf="@id/tvRecordAdd"
+            app:layout_constraintStart_toEndOf="@id/tvRecordNumber0"
+            app:layout_constraintTop_toTopOf="@id/ivBackClick" />
+
+        <TextView
+            android:id="@+id/tvRecordInsert"
+            style="@style/recordMoneyBoardTVNumber"
+            android:background="@color/fd7468"
+            android:text="@string/record_func_insert"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/ivBackClick"
+            app:layout_constraintEnd_toEndOf="@id/tvRecordDiv"
+            app:layout_constraintTop_toTopOf="@id/ivBackClick" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
