@@ -54,7 +54,7 @@ class RecordBillActivity : BaseActivity() {
     }
 
     private val numberClick = View.OnClickListener {
-        VibrateUtils.vibrate(mContext, 50)
+        VibrateUtils.vibrate(mContext, 5)
         when (it.id) {
             R.id.ivCloseRecord -> finish()
             R.id.tvRecordNumber0 -> clickNumber(0.0)
